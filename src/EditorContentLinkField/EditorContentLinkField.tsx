@@ -81,6 +81,7 @@ export const EditorContentLinkField: React.SFC<EditorContentLinkFieldProps> = (
           ? await sdk.contentReference.get(contentTypes)
           : await sdk.contentLink.get(contentTypes);
         if (content && onChange) {
+          setValue(content);
           onChange(content);
         }
       }
